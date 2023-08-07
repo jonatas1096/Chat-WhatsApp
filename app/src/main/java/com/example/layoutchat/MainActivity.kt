@@ -42,26 +42,26 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter") //isso serve para tirar o erro de padding do scaffold
 @Composable
 fun Main() {
 
 
-
+    //começo scaffold padrão
     Scaffold(
         topBar ={
             TopAppBar(
                 title = {
-                    Text(text = "WhatsApp")
+                    Text(text = "WhatsApp") //titulo da aplicação
                 },
                 backgroundColor = corwhatsapp,
                 contentColor = branco,
 
                 actions = {
-                    IconButton(onClick = {
+                    IconButton(onClick = { //função onclick padrão. Tô comentando p lembrar que MUITAS coisas podem possuir isso
 
-                    }) {
-                        Image(imageVector = ImageVector.vectorResource(id = R.drawable.ic_camera),
+                    }) {//Esses image vectors são disponibilizados pelo próprio android:
+                        Image(imageVector = ImageVector.vectorResource(id = R.drawable.ic_camera), //aqui é a sintaxe necessária p achar
                             contentDescription = "",
                             modifier = Modifier.size(24.dp))
 
@@ -93,10 +93,10 @@ fun Main() {
 
 
         },
-        backgroundColor = branco,
+        backgroundColor = branco, //atributos finais do scaffold
         modifier = Modifier.fillMaxSize()
     ){
-        Column() {
+        Column() { //essa column serviu para posicionar o que eu queria um abaixo do outro, inclusive as Rows.
             Row(
                 modifier = Modifier
                     .fillMaxWidth()

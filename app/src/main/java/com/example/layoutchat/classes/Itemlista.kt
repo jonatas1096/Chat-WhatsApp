@@ -2,6 +2,7 @@ package com.example.layoutchat.classes
 
 import android.content.Context
 import android.graphics.Paint.Style
+import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -78,7 +79,7 @@ fun Item(
 
         TextButton( //Esse é o nome do usuario
             onClick = {
-
+                Toast.makeText(context,"Usuário: $nomeUsuarios", Toast.LENGTH_SHORT).show()
             },
             colors = ButtonDefaults.buttonColors( //aqui é para mudar a cor do conteudo e a cor de background do botão
                 contentColor = Color.Black,
